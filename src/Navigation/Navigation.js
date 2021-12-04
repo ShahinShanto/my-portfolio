@@ -1,24 +1,31 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import About from '../About/About';
+import Blogs from '../Blogs/Blogs';
+import Contact from '../Contact/Contact';
 import Header from '../Header/Header';
 import logo from "../image/logo-01.png";
 import Projects from '../Projects/Projects';
+import Skills from '../Skills/Skills';
+import WantService from '../WantService/WantService';
 import './Navigation.css';
 
 const Navigation = () => {
     return (
         <div>
-            <div className="container-fluid px-5 mt-3">
-                <Navbar sticky="top" bg="light" className="navbar-light" expand="lg">
+            <div className="">
+
+                <Navbar fixed="top" bg="dark" className="navbar-dark mb-5" expand="lg">
                     <Container fluid>
                         <Navbar.Brand>
-                            <NavLink className="" to="/">
+                            <NavLink to="/">
                                 <img
                                     src={logo}
                                     width="100%"
-                                    height="35px"
-                                    className="d-inline-block align-top"
+                                    height="40px"
+                                    className="d-inline-block align-top "
                                     alt="React Bootstrap logo"
                                 />
                             </NavLink>
@@ -30,37 +37,64 @@ const Navigation = () => {
                                 style={{ maxHeight: "100px" }}
                                 navbarScroll
                             >
-                                <NavLink to="/home" className="nav-link hover-underline text-clr hover-underline ">
+                                <Nav.Link as={HashLink} to="#home" className="nav-link hover-underline text-white">
                                     Home
-                                </NavLink>
+                                </Nav.Link>
 
-                                <NavLink to="/about" className="nav-link hover-underline text-clr hover-underline ">
+                                <Nav.Link as={HashLink} to="#about" className="nav-link hover-underline text-white">
                                     About
-                                </NavLink>
+                                </Nav.Link>
 
-                                <NavLink to="/projects" className="nav-link hover-underline text-clr hover-underline ">
+                                <Nav.Link as={HashLink} to="#projects" className="nav-link hover-underline text-white">
                                     Projects
-                                </NavLink>
+                                </Nav.Link>
 
-                                <NavLink to="/skills" className="nav-link hover-underline text-clr hover-underline ">
+                                <Nav.Link as={HashLink} to="#skill" className="nav-link hover-underline text-white">
                                     Skills
-                                </NavLink>
+                                </Nav.Link>
 
-                                <NavLink to="/contact" className="nav-link hover-underline text-clr hover-underline ">
+                                <Nav.Link as={HashLink} to="#blogs" className="nav-link hover-underline text-white">
+                                    Blogs
+                                </Nav.Link>
+
+                                <Nav.Link as={HashLink} to="#contact" className="nav-link hover-underline text-white">
                                     Contact Me
-                                </NavLink>
+                                </Nav.Link>
                             </Nav>
-
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+
             </div>
-            <div>
+            <div className="pt-5">
                 <Header></Header>
             </div>
+
             <div>
-                <Projects></Projects>
+                <About></About>
             </div>
+
+            <div>
+                <Projects className="mt-5"></Projects>
+            </div>
+
+            <div>
+                <WantService></WantService>
+            </div>
+
+            <div>
+                <Skills></Skills>
+            </div>
+
+            <div>
+                <Blogs></Blogs>
+            </div>
+
+            <div>
+                <Contact></Contact>
+            </div>
+
+
         </div>
 
     );

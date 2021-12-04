@@ -1,4 +1,11 @@
-
+.clr{
+  color: white !important;
+  background-color: #49C4B2 !important;
+}
+.clr:hover{
+  color:  #49C4B2 !important;
+  background-color:white  !important;
+  }
   
   .wrapper {
     display: flex;
@@ -6,8 +13,8 @@
     justify-content: space-around; }
   
   .cards {
-    width: 280px;
-    height: 360px;
+    width: 17.5rem;
+    height: 22.5rem;
     border-radius: 1rem;
     padding: 1.5rem;
     background: white;
@@ -15,7 +22,7 @@
     display: flex;
     align-items: flex-end;
     transition: 0.4s ease-out;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0px 3px 5px rgba(180, 180, 180, 0.5); }
     .cards:hover {
       transform: translateY(20px); }
       .cards:hover:before {
@@ -71,4 +78,10 @@
           background: dodgerblue;
           color: white; }
 
-         
+          /* .modal-dialog {
+            max-width: 90%;
+          } */
+
+          .flow{
+            overflow: hidden;
+          }
